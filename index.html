@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nippon India Mutual Fund Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="https://www.nipponindiamf.com/Images/logo.svg" alt="Nippon India Mutual Fund">
+    </div>
+    <nav class="nav">
+      <a href="#" class="active">🏠 Home</a>
+      <a href="#">📊 My Portfolio</a>
+      <a href="#">🔍 Explore Funds</a>
+      <a href="#">🎯 Goals</a>
+      <a href="#">📈 Risk Assessment</a>
+      <a href="#">💼 Transact With Demat</a>
+      <a href="#">👤 My Account</a>
+      <a href="#">💳 Transactions</a>
+      <a href="#">🆘 Helpdesk</a>
+      <a href="#" class="logout">🚪 Logout</a>
+    </nav>
+  </aside>
+
+  <!-- Main Dashboard -->
+  <main class="dashboard">
+    <header class="dashboard-header">
+      <h2>Welcome, <span class="user-name">Akshay Damodar Barve</span></h2>
+    </header>
+
+    <!-- Recent Investments Section -->
+    <section class="recent-investments">
+      <h3>My Recent Investments</h3>
+      <div class="investment-cards">
+       <!-- Inside My Recent Investments cards -->
+<div class="card">
+  <h4>Nippon India Arbitrage Fund - Growth Plan - Growth</h4>
+  <p>Folio: 4042027723 | Distributor</p>
+  <div class="amount">₹ 1,11,41,500</div>
+  <button class="btn" onclick="location.href='txn.html'">Repeat Transaction</button>
+</div>
+
+       <!-- Inside My Recent Investments cards -->
+<div class="card">
+  <h4>Nippon India Arbitrage Fund - Growth Plan - Growth</h4>
+  <p>Folio: 4042027723 | Distributor</p>
+  <div class="amount">₹ 1,11,41,500</div>
+  <button class="btn" onclick="location.href='txn.html'">Repeat Transaction</button>
+</div>
+
+        <!-- Inside My Recent Investments cards -->
+<div class="card">
+  <h4>Nippon India Arbitrage Fund - Growth Plan - Growth</h4>
+  <p>Folio: 4042027723 | Distributor</p>
+  <div class="amount">₹ 1,11,41,500</div>
+  <button class="btn" onclick="location.href='txn.html'">Repeat Transaction</button>
+</div>
+
+      </div>
+    </section>
+
+    <!-- Financial Planner -->
+    <section class="financial-planner">
+      <h3>My Financial Planner</h3>
+      <div class="planner-box">
+        <div class="planner-inputs">
+          <label>
+            Investment Type:
+            <select>
+              <option>Monthly SIP</option>
+              <option>Lumpsum</option>
+            </select>
+          </label>
+
+          <label>
+            Investment Duration:
+            <input type="range" min="1" max="30" value="1">
+            <span>1 Year</span>
+          </label>
+
+          <label>
+            Monthly Investment Amount:
+            <input type="number" placeholder="₹ 100">
+          </label>
+
+          <label>
+            Expected Annual Returns:
+            <input type="number" placeholder="2%">
+          </label>
+        </div>
+      </div>
+      <button id="calculateBtn" class="btn">Submit / Check Logic</button>
+<p id="result"></p>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

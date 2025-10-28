@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repeat Transaction</title>
+  <link rel="stylesheet" href="/txn.css">
+</head>
+<body>
+  <main class="dashboard" style="margin-left:240px">
+    <header class="dashboard-header">
+      <h2>Repeat Transaction</h2>
+    </header>
+
+    <section class="transaction-form">
+      <div class="planner-box">
+        <h3>Enter Transaction Details</h3>
+        <label>Fund Name:</label>
+        <input type="text" value="Nippon India Arbitrage Fund - Growth Plan" readonly>
+
+        <label>Investment Type:</label>
+        <select>
+          <option>Monthly SIP</option>
+          <option>Lumpsum</option>
+        </select>
+
+        <label>Investment Amount (₹):</label>
+        <input type="number" id="transactionAmount" placeholder="Enter amount">
+
+        <label>Payment Method:</label>
+        <select>
+          <option>Net Banking</option>
+          <option>UPI</option>
+          <option>Debit Card</option>
+        </select>
+
+        <button class="btn" id="confirmTransaction">Confirm Transaction</button>
+        <p id="transactionResult"></p>
+
+        <a href="index.html" class="btn" style="background:#555;margin-top:10px;">← Back to Dashboard</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('confirmTransaction').addEventListener('click', () => {
+      const amt = document.getElementById('transactionAmount').value;
+      const result = document.getElementById('transactionResult');
+
+      if (!amt || amt <= 0) {
+        result.textContent = "⚠️ Please enter a valid amount.";
+        result.style.color = "red";
+        return;
+      }
+
+      result.textContent = `✅ Transaction of ₹${parseInt(amt).toLocaleString('en-IN')} successful!`;
+      result.style.color = "green";
+    });
+  </script>
+</body>
+</html>

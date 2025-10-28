@@ -1,0 +1,187 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  display: flex;
+  background-color: #f2f4f8;
+  color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: #fff;
+  height: 100vh;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .logo {
+  text-align: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.nav a {
+  padding: 12px 20px;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  border-left: 4px solid transparent;
+  transition: 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+  background-color: #f8f8f8;
+  border-left: 4px solid #e60000;
+  color: #e60000;
+}
+
+.logout {
+  margin-top: auto;
+  background-color: #f8d7da;
+  color: #b00000;
+}
+
+/* Dashboard */
+.dashboard {
+  margin-left: 240px;
+  padding: 20px 40px;
+  width: 100%;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.user-name {
+  color: #e60000;
+}
+
+/* Investment Cards */
+.recent-investments {
+  margin-top: 20px;
+}
+
+.investment-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 280px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card h4 {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.amount {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #e60000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #c00000;
+}
+
+/* Financial Planner */
+.financial-planner {
+  margin-top: 40px;
+}
+
+.planner-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-top: 10px;
+}
+
+.planner-inputs label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.planner-inputs input,
+.planner-inputs select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar .nav a {
+    text-align: center;
+    font-size: 0;
+  }
+
+  .sidebar .nav a::before {
+    font-size: 18px;
+  }
+
+  .dashboard {
+    margin-left: 60px;
+    padding: 20px;
+  }
+
+  .investment-cards {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    margin-left: 0;
+  }
+}
